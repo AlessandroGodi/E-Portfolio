@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    line-height: 1.5;
 }
 
 li {
@@ -22,11 +23,16 @@ ul {
 }
 
 .container {
-    margin: 64px 0;
+    margin-bottom: 8px;
+    padding: 40px 0;
 }
 
 .text-purple {
     color: #6415ff;
+}
+
+h3 {
+    font-size: 16px;
 }
 
 a:hover {
@@ -172,4 +178,137 @@ nav {
 }
 
 /* FEATURES */
+
+.row__features {
+    max-width: 1000px;
+}
+
+.features__title {
+    text-align: center;
+}
+
+.features__sub-title {
+    text-align: center;
+    font-size: 48px;
+    margin: 16px 0;
+}
+
+.features__para {
+    text-align: center;
+    padding: 0 256px;
+    color: grey;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 36px 0;
+}
+
+.service {
+    display: flex;
+    width: calc(100% / 3);
+    padding: 0 36px;
+}
+
+.service__img {
+    color: #6415ff;
+    border: 2px solid grey;
+    padding: 16px;
+    border-radius: 50%;
+}
+
+.service__description {
+    display: flex;
+    flex-direction: column;
+}
+
+.service__title {
+    font-size: 22px;
+}
+
+.service__title,
+.service__para {
+    padding-left: 16px;
+}
+
+.service__para {
+    color: grey;
+    padding: 8px 0 16px 16px;
+}
+
+/* QUALITY-WORK */
+
+.quality-work {
+    display: flex;
+}
+
+.quality-work__description {
+    width: 50%;
+    padding: 32px 8px;
+}
+
+.quality-work__title {
+    padding-bottom: 8px;
+}
+
+.quality-work__sub-title {
+    font-size: 48px;
+}
+
+.quality-work__para {
+    color: grey;
+    padding: 8px 0 40px 0;
+}
+
+.quality-work__img--wrapper {
+    width: 50%;
+}
+
+.quality-work__img {
+    width: 600px;
+}
+
+/* GET-STARTED */
+
+.get-started {
+    display: flex;
+}
+
+.get-started__img--wrapper {
+    width: 50%;
+}
+
+.get-started__img {
+    width: 600px;
+    padding: 16px;
+}
+
+.get-started__sub-title {
+    font-size: 48px;
+    margin: 16px 0;
+}
+
+.steps {
+    margin-left: 24px;
+}
+
+.step {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.step__number {
+    color: grey;
+    font-size: 40px;
+}
+
+.step__guide {
+    margin-left: 16px;
+    max-width: 300px;
+}
+
+.guide__title {
+    font-size: 20px;
+}
 
