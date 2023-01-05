@@ -21,13 +21,28 @@
 
 
 
-// Function definition
-function welcomePersonToFES (name) {
-    // console.log("welcome to FES, DAVID") Back ticks used when ${} in code
-    console.log(`Welcome to Fes, ${name}`) 
+// // Function definition
+// function welcomePersonToFES (name) {
+//     // console.log("welcome to FES, DAVID") Back ticks used when ${} in code
+//     console.log(`Welcome to Fes, ${name}`) 
+// }
+
+// // Call the function
+// welcomePersonToFES ('David');
+// welcomePersonToFES ('Zen');
+// welcomePersonToFES ('Metri');
+
+function CelsiusToFahrenheit (Celsius) {
+    // let fahrenheit = Celsius * 1.8 + 32 Not necesary to have `let fahrenheit`
+    return Celsius * 1.8 + 32
 }
 
-// Call the function
-welcomePersonToFES ('David');
-welcomePersonToFES ('Zen');
-welcomePersonToFES ('Metri');
+console.log(CelsiusToFahrenheit(10))
+
+let arr = [20, 30, 40, 50, 100]
+
+console.log(arr);
+
+arr.push(200)
+
+console.log(arr);
