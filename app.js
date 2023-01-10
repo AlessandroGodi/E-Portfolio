@@ -1,47 +1,123 @@
-// // First way of accessing an element
-// console.log(document.querySelector('#title'))
-
-// // Second way of accessing an element
-// console.log(document.getElementById('title'))
-
-// function changeTitleToRed() {
-//     document.querySelector(".title").style.color = 'red'
-// }
-
-
-
-
-// const emailRef = document.querySelector(".email");
-// console.log(emailRef)
-
-// // 1. Then
-// fetch("https://jsonplaceholder.typicode.com/users/1")
-//     .then(response => {
-//         return response.json()
-//     })
-//     .then(data => {
-//         console.log(data)
-//          emailRef.innerHTML = data.email
-//     })
-
-// // 2. Async/Await
-// async function main() {
-//     const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
-//     const data = await response.json()
-//     console.log(data)
-//     emailRef.innerHTML = data.phone
-// }
-
-// main();
-
-
-
-
-// Creating Promises
-function getSubscriptionStatus() {
-    return new Promise((resolve, reject) => {
-        resolve("VIP")
-    })
+// Q.1 Return the Sum of Two Number
+function addition(num1, num2) {
+    return num1 + num2;
 }
 
-console.log(getSubscriptionStatus())
+console.log(addition(3,5));
+
+// Q.2 Convert Hours into Seconds
+function hoursIntoSeconds(hour) {
+    return hour * 60 * 60;
+}
+
+console.log(hoursIntoSeconds(2));
+
+// Q.3 Calculate the Perimeter of a Rectangle
+function calcPerimeter(width, length) {
+    return (width * 2) + (length * 2);
+}
+
+console.log(calcPerimeter(6,7));
+
+// Q.4 Calculate the Area of a Triangle
+function calcTriangleArea(base, height) {
+    return (1 / 2) * base * height;
+}
+
+console.log(calcTriangleArea(10,10));
+
+// Q.5 Extend a String
+function appendFrontend(string) {
+    return string + 'Frontend'
+}
+
+console.log(appendFrontend('Apple'));
+
+// Q.6 Greater than 100? Then Return True
+function sumGreaterThan100(num1, num2) {
+    if (num1 + num2 > 100) {
+    return true;
+    }
+    return false;
+}
+
+// function sumGreaterThan100(num1, num2) {
+//     return num1 + num2 >=100
+// }
+
+console.log(sumGreaterThan100(50,51));
+
+// Q.7 Less Than or Equal to Zero? Then Return True
+function lessThanOrEqualToZero(num) {
+    return num <= 0
+}
+
+console.log(lessThanOrEqualToZero(40))
+
+// Q.8 Opposite Boolean
+function oppositeBoolean(bool) {
+    if (bool === false) {
+        return true;
+    }
+    return false;
+}
+
+// function oppositeBoolean(bool) {
+//     return !bool;
+// }
+
+console.log(oppositeBoolean(false));
+
+// Q.9 Is Not the Number 0, Then Retur True
+function isNotZero(num) {
+    return num !== 0
+}
+
+console.log(isNotZero("0"));
+
+// Q.10 Calculate the Remainder
+function calcRemainder(num1, num2) {
+    return num1 % num2;
+}
+
+console.log(calcRemainder(10,3));
+
+// Q.11 Is the Number Odd? Then Return True
+function isOdd(num) {
+    return num % 2 !== 0;
+}
+
+console.log(isOdd(12))
+
+// Q.12 If a Number is Even, Return 1 Otherwise Return -1
+function booleanInteger(num) {
+    if (num % 2 ===0) {
+        return 1;
+    }
+    return -1;
+}
+
+// function booleanInteger(num) {
+//     return num % 2 === 0 ? 1 : -1;
+// }
+
+console.log(booleanInteger(3))
+
+// Q.13 Check If A User is Logged In AND Subscribed
+function isLoggedInAndSubscribed (loggedIn, Subscribed) {
+    // return
+    return (loggedIn === 'LOGGED_IN') && (Subscribed === 'SUBSCRIBED')
+
+}
+
+console.log(isLoggedInAndSubscribed('LOGGED_IN','UNSUBSCRIBED'))
+
+// Q.14 Check If A User is Logged In AND Subscribed
+function isLoggedInAndSubscribed (loggedIn, Subscribed) {
+    return (loggedIn === 'LOGGED_IN') || (Subscribed === 'SUBSCRIBED')
+
+}
+
+console.log(isLoggedInAndSubscribed('LOGGED_IN','UNSUBSCRIBED'));
+
+//Q.15 
