@@ -141,3 +141,23 @@ function arrLength(arr) {
 console.log(arrLength([1, 2, 3, 4, 5]))
 
 // Q.17 Return Last Element in Array
+function arrLastElement(arr) {
+    return arr[arr.length - 1];
+}
+
+console.log(arrLastElement([1, 2, 3, 4]))
+
+// Q.18 Find the Sum of an Array
+function arrSum(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; ++i) {
+        // How to loop through every element in an array
+        // console.log(arr[i]);
+        sum = sum + arr[i];
+    }
+    return sum;
+}
+
+console.log(arrSum([1, 2, 3, 4, 5, 6]))
+
+// Q.19 Add Up the Numbers from a Single Number
