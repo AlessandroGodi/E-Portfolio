@@ -120,4 +120,24 @@ function isLoggedInAndSubscribed (loggedIn, Subscribed) {
 
 console.log(isLoggedInAndSubscribed('LOGGED_IN','UNSUBSCRIBED'));
 
-//Q.15 
+//Q.15 Given Two Values, Return if first One is Falsy, Otherwise Return the Second ONe
+function falsyOrTruthy(elem1, elem2) {
+    return !elem1 ? elem1 : elem2;
+    // if (!elem1) {
+    //     return elem1;
+    // }
+    // else {
+    //     return elem2;
+    // } (LONG WAY)
+}
+
+console.log(falsyOrTruthy(1, 'dog'));
+
+// Q.16 Return the Length of Any Given Array
+function arrLength(arr) {
+    return arr.length;
+}
+
+console.log(arrLength([1, 2, 3, 4, 5]))
+
+// Q.17 Return Last Element in Array
