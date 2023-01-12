@@ -161,3 +161,41 @@ function arrSum(arr) {
 console.log(arrSum([1, 2, 3, 4, 5, 6]))
 
 // Q.19 Add Up the Numbers from a Single Number
+function progressiveSum(num) {
+    let sum = 0;
+    for(let i = 1; i <= num; ++i) {
+        sum = sum + i;
+    }
+    return sum
+}
+
+console.log(progressiveSum(3))
+
+// Q.20 Calculate the Time
+function calcTime(seconds) {
+    let timerMinutes = Math.floor(seconds / 60);
+    let timerSeconds = seconds % 60;
+
+    if (timerMinutes.toString().length === 1) {
+        timerMinutes = '0' + timerMinutes
+    }
+
+    return timerMinutes + ':' + timerSeconds;
+}
+
+console.log(calcTime(500))
+
+// Q.21 Find the Largest Number
+function getMax(arr) {
+    let max = arr[0];
+    for(let i = 0; i < arr.length; ++i){
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+console.log(getMax([-500, -200, -300]))
+
+// Q.22 Reverse a String
