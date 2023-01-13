@@ -199,3 +199,75 @@ function getMax(arr) {
 console.log(getMax([-500, -200, -300]))
 
 // Q.22 Reverse a String
+function reverseString(str) {
+    // let reversedString = '';
+    // for(let i = 0; i <str.length; ++i) {
+    //     reversedString = str[i] + reversedString; //(incremening for loop)
+    // }
+    // return reversedString;
+
+    // for(let i = str.length -1; i >= 0; --1) {
+    //     reversedString = reversedString + str[i] // (decrementing for loop)
+    // }
+    // return reversedString; ()
+    
+    return str.split('').reverse().join(''); //(array reverse property)
+}
+
+console.log(reverseString('abc'))
+
+// Q.23 Turn Every Element in an Array into 0
+function convertToZeros(arr) {
+    // let newArr = [];
+    // for(let i = 0; i <arr.length; ++i) {
+    //     newArr[i] = 0 //(for loop)
+    // }
+    // return newArr; 
+
+    // return new Array(arr.length).fill(0); //(array '.fill')
+
+    return arr.map(elem => { 
+        return 0 // if have {}, need to return if using .map
+    }); //(array 'map')
+}
+
+console.log(convertToZeros([10, 20, 80, 30, 35]))
+
+//Q.24 Filter Out all the Apples
+function removeApples(arr) {
+    // let noApples = [];
+    // for(let i = 0; i <arr.length; ++i) {
+    //     if (arr[i] !== 'Apple') {
+    //         noApples.push(arr[i])
+    //     }
+    // }
+    // return noApples; //(for loop)
+
+    return arr.filter(elem => elem !== 'Apple'); //(array 'filter')
+}
+
+console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple']))
+
+//Q.25 Filter Out All the Falsy Values
+function filterOutFalsy(arr) {
+    // let truthyArr = [];
+    // for(let i = 0; i <arr.length; ++i) {
+    //     if(!!arr[i] === true) {
+    //         truthyArr.push(arr[i]);
+    //     }
+    // }
+    // return truthyArr; //(for loop)
+
+    return arr.filter(elem => !!elem === true); // (array 'filter')
+}
+
+console.log(filterOutFalsy(["", 0, 'Tomato', undefined, "0", false, 'Orange', []]))
+
+//Q.26 Truthy to True, Falsy to False
+function convertToBoolean(arr) {
+    return arr.map(elem => !!elem) //(array 'map')
+}
+
+console.log(convertToBoolean([500, 0, "David", "", []]))
+
+//Q.27 
