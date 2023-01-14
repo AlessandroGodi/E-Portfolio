@@ -295,8 +295,39 @@ function sortLowToHigh(numebrs) {
 console.log(sortLowToHigh([5, 1, 20, 10, -30, 10006, 2000]))
 
 //Q.29 Sort by Highest to Lowest Price
-function sortHighToLow() {
-    return numbers.sort((a, b) => b - a)
+function sortHighToLow(numbers) {
+    return numbers.sort((a, b) => {
+        return b.price - a.price
+    });
 }
 
-console.log(sortHighToLow([{ id: 5, price: 50 }, { id: 5, price: 50 }, { id: 5, price: 50 }]))
+console.log(sortHighToLow([
+    { id: 1, price: 50 },
+    { id: 2, price: -20 },
+    { id: 3, price: 500 }
+])
+);
+
+//Q.25 Find All Posts by a Single User
+async function postsByUser(UserId) {
+    // fetch("https://jsonplaceholder.typicode.com/posts")
+    //     .then(res => console.log(res))
+    // console.log(userId) //fetching mock API
+
+    const promise = await fetch("https://jsonplaceholder.typicode.com/posts"); //If using 'await' in a function, need to turn it into a 'async function'
+    const result = await promise.json();
+    const posts = result.filter(element => element.userId === UserId)
+    console.log(posts)
+}
+
+postsByUser(4);
+
+// Q.26 First 6 Incomplete Todos
+async function firstSixIncomplete(inComplete) {
+    const promise = await fetch("https://jsonplaceholder.typicode.com/todos");
+    const result = await promise.json();
+    const incompleteTasks = result.filter(elem => !elem.completed).slice(0, 6);
+    console.log(incompleteTasks);
+}
+
+firstSixIncomplete(6);
