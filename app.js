@@ -3,7 +3,7 @@ function addition(num1, num2) {
     return num1 + num2;
 }
 
-console.log(addition(3,5));
+console.log(addition(3, 5));
 
 // Q.2 Convert Hours into Seconds
 function hoursIntoSeconds(hour) {
@@ -17,14 +17,14 @@ function calcPerimeter(width, length) {
     return (width * 2) + (length * 2);
 }
 
-console.log(calcPerimeter(6,7));
+console.log(calcPerimeter(6, 7));
 
 // Q.4 Calculate the Area of a Triangle
 function calcTriangleArea(base, height) {
     return (1 / 2) * base * height;
 }
 
-console.log(calcTriangleArea(10,10));
+console.log(calcTriangleArea(10, 10));
 
 // Q.5 Extend a String
 function appendFrontend(string) {
@@ -36,7 +36,7 @@ console.log(appendFrontend('Apple'));
 // Q.6 Greater than 100? Then Return True
 function sumGreaterThan100(num1, num2) {
     if (num1 + num2 > 100) {
-    return true;
+        return true;
     }
     return false;
 }
@@ -45,7 +45,7 @@ function sumGreaterThan100(num1, num2) {
 //     return num1 + num2 >=100
 // }
 
-console.log(sumGreaterThan100(50,51));
+console.log(sumGreaterThan100(50, 51));
 
 // Q.7 Less Than or Equal to Zero? Then Return True
 function lessThanOrEqualToZero(num) {
@@ -80,7 +80,7 @@ function calcRemainder(num1, num2) {
     return num1 % num2;
 }
 
-console.log(calcRemainder(10,3));
+console.log(calcRemainder(10, 3));
 
 // Q.11 Is the Number Odd? Then Return True
 function isOdd(num) {
@@ -91,7 +91,7 @@ console.log(isOdd(12))
 
 // Q.12 If a Number is Even, Return 1 Otherwise Return -1
 function booleanInteger(num) {
-    if (num % 2 ===0) {
+    if (num % 2 === 0) {
         return 1;
     }
     return -1;
@@ -104,21 +104,21 @@ function booleanInteger(num) {
 console.log(booleanInteger(3))
 
 // Q.13 Check If A User is Logged In AND Subscribed
-function isLoggedInAndSubscribed (loggedIn, Subscribed) {
+function isLoggedInAndSubscribed(loggedIn, Subscribed) {
     // return
     return (loggedIn === 'LOGGED_IN') && (Subscribed === 'SUBSCRIBED')
 
 }
 
-console.log(isLoggedInAndSubscribed('LOGGED_IN','UNSUBSCRIBED'))
+console.log(isLoggedInAndSubscribed('LOGGED_IN', 'UNSUBSCRIBED'))
 
 // Q.14 Check If A User is Logged In AND Subscribed
-function isLoggedInAndSubscribed (loggedIn, Subscribed) {
+function isLoggedInAndSubscribed(loggedIn, Subscribed) {
     return (loggedIn === 'LOGGED_IN') || (Subscribed === 'SUBSCRIBED')
 
 }
 
-console.log(isLoggedInAndSubscribed('LOGGED_IN','UNSUBSCRIBED'));
+console.log(isLoggedInAndSubscribed('LOGGED_IN', 'UNSUBSCRIBED'));
 
 //Q.15 Given Two Values, Return if first One is Falsy, Otherwise Return the Second ONe
 function falsyOrTruthy(elem1, elem2) {
@@ -163,7 +163,7 @@ console.log(arrSum([1, 2, 3, 4, 5, 6]))
 // Q.19 Add Up the Numbers from a Single Number
 function progressiveSum(num) {
     let sum = 0;
-    for(let i = 1; i <= num; ++i) {
+    for (let i = 1; i <= num; ++i) {
         sum = sum + i;
     }
     return sum
@@ -188,7 +188,7 @@ console.log(calcTime(500))
 // Q.21 Find the Largest Number
 function getMax(arr) {
     let max = arr[0];
-    for(let i = 0; i < arr.length; ++i){
+    for (let i = 0; i < arr.length; ++i) {
         if (arr[i] > max) {
             max = arr[i];
         }
@@ -210,7 +210,7 @@ function reverseString(str) {
     //     reversedString = reversedString + str[i] // (decrementing for loop)
     // }
     // return reversedString; ()
-    
+
     return str.split('').reverse().join(''); //(array reverse property)
 }
 
@@ -226,7 +226,7 @@ function convertToZeros(arr) {
 
     // return new Array(arr.length).fill(0); //(array '.fill')
 
-    return arr.map(elem => { 
+    return arr.map(elem => {
         return 0 // if have {}, need to return if using .map
     }); //(array 'map')
 }
@@ -270,4 +270,33 @@ function convertToBoolean(arr) {
 
 console.log(convertToBoolean([500, 0, "David", "", []]))
 
-//Q.27 
+//Q.27 Show Rating
+function showRating(rating) {
+    let ratings = "";
+    for (let i = 0; i < Math.floor(rating); ++i) {
+        ratings += "*" //ratings = ratings + "*"
+        if (i !== Math.floor(rating) - 1) {
+            ratings += " " //ratings = ratings + " "
+        }
+    }
+    if (!Number.isInteger(rating)) { //checking if a number is not an integer
+        ratings += " ."; //ratings = ratings + " ."
+    }
+    return ratings;
+}
+
+console.log(showRating(4.5));
+
+//Q.28 Sort by Lowest to Highest Price
+function sortLowToHigh(numebrs) {
+    return numebrs.sort((a, b) => a - b); //how to sort numbers form lowest to highest OR highest to lowest is b - a
+} //invisible return in from of a - b ( (a, b) => {return a - b} )
+
+console.log(sortLowToHigh([5, 1, 20, 10, -30, 10006, 2000]))
+
+//Q.29 Sort by Highest to Lowest Price
+function sortHighToLow() {
+    return numbers.sort((a, b) => b - a)
+}
+
+console.log(sortHighToLow([{ id: 5, price: 50 }, { id: 5, price: 50 }, { id: 5, price: 50 }]))
